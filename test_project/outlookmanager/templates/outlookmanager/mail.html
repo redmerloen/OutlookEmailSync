@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1>Your Email</h1>
+<table width="100%" border="1">
+    <thead>
+        <tr>
+            <th>From</th>
+            <th>Subject</th>
+            <th>Received</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for message in messages %}
+            <tr>
+                <td>{{ message.From.EmailAddress.Name }}</td>
+                <td>{{ message.Subject }}</td>
+                <td>{{ message.DateTimeReceived }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
